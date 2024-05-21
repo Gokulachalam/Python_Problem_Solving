@@ -15,12 +15,43 @@
 
 
 
-digits = [1,2,3]
-number = int(''.join(map(str, digits)))
-# number = int(''.join(map(str,digits)))
-print(number)
-number = number+1
-print(number)
-conv = list(map(int, str(number)))
+# digits = [1,2,3]
+# number = int(''.join(map(str, digits)))
+# # number = int(''.join(map(str,digits)))
+# print(number)
+# number = number+1
+# print(number)
+# conv = list(map(int, str(number)))
 
-print(conv)
+# print(conv)
+
+
+
+
+
+import unittest
+
+class TestDigitConversion(unittest.TestCase):
+
+    def setUp(self):
+        # Set up any necessary variables or states
+        self.digits = [1, 2, 3]
+
+    def test_conversion_from_digits_to_number(self):
+        number = int(''.join(map(str, self.digits)))
+        self.assertEqual(number, 123)
+
+    def test_increment_number(self):
+        number = int(''.join(map(str, self.digits)))
+        number += 1
+        self.assertEqual(number, 124)
+
+    def test_conversion_from_number_to_digits(self):
+        number = int(''.join(map(str, self.digits)))
+        number += 1
+        conv = list(map(int, str(number)))
+        self.assertEqual(conv, [1, 2, 4])
+
+if __name__ == '__main__':
+    unittest.main()
+
