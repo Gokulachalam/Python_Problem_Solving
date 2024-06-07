@@ -17,20 +17,17 @@
 
 
 nums = [2,7,8,10,8,10,1,10,5,9]
-first = max(nums)
+first = sum(nums)
 print(first)
 
 
 conv = list(map(str,nums))
 c = ''.join(conv)
 
-
-
-
 s = str(c)
 
 final = list(map(int,s))
-second = max(final)
+second = sum(final)
 print(second)
 
 
