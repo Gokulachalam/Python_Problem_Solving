@@ -1,15 +1,45 @@
 
  
-from collections import Counter
-nums = [1,3,6,4,3,4,2,4,5,3,53,3,5,35,34,35,5,31,99,99]
-c=Counter(nums)
+# from collections import Counter
+# nums = [1,2,3,4,4,4]
+# # c=Counter(nums)
 
-new = []
+# # new = []
 
-for key,value in c.items():
-    if value ==1:
-        new.append(key)
-print(max(new))
+# # print(type(c))
 
+# # for key,value in c.items():
+# new = []
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         if nums[i] == nums[j]:
+#             new.append(nums[i])
+#             new.append(nums[j])
 
-#new change
+            
+
+# print(new[0])
+
+def find_max_repeating_element(arr):
+    # Create a dictionary to store the frequency of each element
+    frequency_dict = {}
+
+    # Traverse the array and populate the frequency dictionary
+    for elem in arr:
+        if elem in frequency_dict:
+            frequency_dict[elem] += 1
+        else:
+            frequency_dict[elem] = 1
+
+    # Find the element with the maximum frequency
+    max_count = -1
+    max_elem = None
+
+    for elem, count in frequency_dict.items():
+        if count > max_count:
+            max_count = count
+            max_elem = elem
+
+    return max_elem
+
+nums = [1,2,3,4,4,4]

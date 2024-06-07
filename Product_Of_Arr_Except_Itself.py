@@ -27,3 +27,5 @@ for i in range(len(nums)):
     new.append(product)
 
 print(new)
+
+

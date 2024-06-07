@@ -25,26 +25,17 @@
 
 
 
-# s = "aabb"
-
-# v = []
-# for i in s:
-#     if s.count(i) == 1:
-#         v.append(i)
-
-# if v:
-#     first_index = s.index(v[0])
-#     print(first_index)
-# else:
-#     print("-1")
-
-
-
-
-
-from collections import Counter
 s = "loveleetcode"
-c = Counter(s)
 
-for i,f in enumerate(s):
-    print(i,f)
+v = []
+for i in s:
+    if s.count(i) == 1:
+        v.append(i)
+
+if v:
+    first_index = s.index(v[0])
+    print(first_index)
+else:
+    print("-1")
+
+

@@ -1,8 +1,3 @@
-
-
-
- 
-
 # Example 1:
 
 # Input: hours = [0,1,2,3,4], target = 2

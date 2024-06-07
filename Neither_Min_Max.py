@@ -27,3 +27,6 @@ nums.remove(maxi)
 mini = min(nums)
 nums.remove(mini)
 print(nums[0])
+
+
+
