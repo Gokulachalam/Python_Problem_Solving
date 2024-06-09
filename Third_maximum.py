@@ -83,47 +83,31 @@
 
 
 
-
-from typing import List
-
-class Solution:
-    def thirdMax(self, nums: List[int]) -> int:
+nums = [1,2,3]
 
 
-        firstmaxs = nums[0]
-        secondmaxs = nums[1]
-        thirdmaxs = nums[2]
+if len(nums) ==2:
+    print(max(nums))
 
-        for i in range(len(nums)):
-            if nums[i] > firstmaxs:
-                firstmaxs = nums[i]
+nums.sort()
 
-        if firstmaxs in nums:
-            nums.remove(firstmaxs)
+s = set(nums)
 
-        if len(nums) > 0:
-            secondmaxs = nums[0]
+conv = list(s)
+if len(conv) ==2 or len(conv) ==1:
+    print(max(conv))
+else:
 
-        for j in range(len(nums)):
-            if nums[j] > secondmaxs:
-                secondmaxs = nums[j]
+    first = max(conv)
+    conv.remove(first)
 
-        if secondmaxs in nums:
-            nums.remove(secondmaxs)
 
-        if len(nums) > 0:
-            thirdmaxs = nums[0]
+    second = max(conv)
+    conv.remove(second)
 
-        for k in range(len(nums)):
-            if nums[k] > thirdmaxs:
-                thirdmaxs = nums[k]
 
-        if thirdmaxs in nums:
-            nums.remove(thirdmaxs)
 
-        return thirdmaxs
+    third = max(conv)
 
-# Example usage:
-solution = Solution()
-nums = [3, 2,2, 1]
-print(solution.thirdMax(nums))  # Output: 1
+
+    print(third)
