@@ -12,7 +12,7 @@
 # Output: true
 # Explanation: [5,7,23] are three consecutive odds.
 
-
+#edfghj
 
 
 # arr = [1,3,5,24]
