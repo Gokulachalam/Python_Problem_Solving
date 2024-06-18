@@ -1,18 +1,16 @@
+#second largest elemnt with duplicates
+
 n = [4,4,3,2,1,0]
-new = []
-for i in range(len(n)):
-    for j in range(i+1,len(n)):
-        if n[i] == n[j]:
-            new.append(n[i])
-maxi = n[2]
-res = [i for i in n if i not in new]
+s = set(n)
+conv = list(s)
+first_max = n[0]
+for i in range(len(conv)):
+    if conv[i]>first_max:
+        first_max = conv[i]
+print(first_max)
 
-
-
-
-for k in range(len(res)):
-
-    if res[k]>maxi:
-        maxi = res[k]
-
-print(maxi)
+second_max = 1
+for j in range(len(conv)):
+    if conv[j] > second_max and conv[j]<first_max:
+        second_max=conv[j]
+print(second_max)
